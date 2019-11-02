@@ -20,7 +20,7 @@ public class InfoResource {
 	@Autowired
 	InfoRepository infoRepository;
 	
-	@GetMapping("/")
+	@GetMapping("")
 	public List<Info> info() {
 		return infoRepository.findAll();
 	}
@@ -45,12 +45,12 @@ public class InfoResource {
 		return infoRepository.findByDevolvido(true);
 	}
 	
-	@PostMapping("/")
+	@PostMapping("")
 	public Info salvaInfo(@RequestBody Info info) {
 		return infoRepository.save(info);
 	}
 	
-	@PutMapping("/")
+	@PutMapping("")
 	public Info atualizarInfo(@RequestBody Info info) {
 		return infoRepository.save(info);
 	}
