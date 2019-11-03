@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.biblioteca.api.rest.models.Info;
-import com.biblioteca.api.rest.models.Livro;
 import com.biblioteca.api.rest.repository.InfoRepository;
 
 @RestController
