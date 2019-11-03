@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.biblioteca.api.rest.models.Info;
+import com.biblioteca.api.rest.models.Livro;
 import com.biblioteca.api.rest.repository.InfoRepository;
 
 @RestController
@@ -50,6 +52,11 @@ public class InfoResource {
 	@PostMapping("")
 	public Info salvaInfo(@RequestBody Info info) {
 		return infoRepository.save(info);
+	}
+	
+	@DeleteMapping("/info")
+	public void deletaInfo(@RequestBody Info info) {
+		infoRepository.delete(info);
 	}
 	
 	@PutMapping("")
